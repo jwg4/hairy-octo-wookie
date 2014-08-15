@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wget http://raptureready.com/rap2.html -o /home/pi/data/rapture/log -O /home/pi/data/rapture/`date +%Y%m%d`.html

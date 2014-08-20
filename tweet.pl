@@ -17,3 +17,8 @@ my $nt = Net::Twitter->new(
     access_token_secret => $access_secret,
     ssl                 => 1,
     );
+
+my $statuses = $nt->friends_timeline({});
+for my $status ( @$statuses ) {
+    print "$status->{created_at} <$status->{user}{screen_name}> $status->{text}\n";
+}
